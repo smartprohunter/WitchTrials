@@ -1,0 +1,711 @@
+<?xml version="1.0"?>
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://www.semanticweb.org/gadnqra/ontologies/2025/4/untitled-ontology-10"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     ontologyIRI="http://www.semanticweb.org/gadnqra/ontologies/2025/4/untitled-ontology-10">
+    <Prefix name="" IRI="http://www.semanticweb.org/gadnqra/ontologies/2025/4/untitled-ontology-10/"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Prefix name="untitled-ontology-10" IRI="http://www.semanticweb.org/gadnqra/ontologies/2025/4/untitled-ontology-10#"/>
+    <Declaration>
+        <Class IRI="#Judge"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Person"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Townie"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#Relationships"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#dislikes"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#likes"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#relative_of"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#Age"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#Profession"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#Severity"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#has_Social_Status"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Ann_Putnam"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Bridget_Bishop"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Elizabeth_Proctor"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Giles_Corey"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#John_Hawthorne"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#John_Porter"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#John_Proctor"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Joseph_Porter"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Martha_Carrier"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Rebecca_Nurse"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Samuell_Sewall"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Sarah_Good"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Susannah_Martin"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Thomas_Danforth"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Thomas_Putnam"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Tituba"/>
+    </Declaration>
+    <SubClassOf>
+        <Class IRI="#Judge"/>
+        <Class IRI="#Person"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Townie"/>
+        <Class IRI="#Person"/>
+    </SubClassOf>
+    <DisjointClasses>
+        <Class IRI="#Judge"/>
+        <Class IRI="#Townie"/>
+    </DisjointClasses>
+    <ClassAssertion>
+        <Class IRI="#Townie"/>
+        <NamedIndividual IRI="#Ann_Putnam"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Townie"/>
+        <NamedIndividual IRI="#Bridget_Bishop"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Townie"/>
+        <NamedIndividual IRI="#Elizabeth_Proctor"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Townie"/>
+        <NamedIndividual IRI="#Giles_Corey"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Judge"/>
+        <NamedIndividual IRI="#John_Hawthorne"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Townie"/>
+        <NamedIndividual IRI="#John_Porter"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Townie"/>
+        <NamedIndividual IRI="#John_Proctor"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Townie"/>
+        <NamedIndividual IRI="#Joseph_Porter"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Townie"/>
+        <NamedIndividual IRI="#Martha_Carrier"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Townie"/>
+        <NamedIndividual IRI="#Rebecca_Nurse"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Judge"/>
+        <NamedIndividual IRI="#Samuell_Sewall"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Townie"/>
+        <NamedIndividual IRI="#Sarah_Good"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Townie"/>
+        <NamedIndividual IRI="#Susannah_Martin"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Judge"/>
+        <NamedIndividual IRI="#Thomas_Danforth"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Townie"/>
+        <NamedIndividual IRI="#Thomas_Putnam"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Townie"/>
+        <NamedIndividual IRI="#Tituba"/>
+    </ClassAssertion>
+    <DifferentIndividuals>
+        <NamedIndividual IRI="#Ann_Putnam"/>
+        <NamedIndividual IRI="#Bridget_Bishop"/>
+        <NamedIndividual IRI="#Elizabeth_Proctor"/>
+        <NamedIndividual IRI="#Giles_Corey"/>
+        <NamedIndividual IRI="#John_Hawthorne"/>
+        <NamedIndividual IRI="#John_Porter"/>
+        <NamedIndividual IRI="#John_Proctor"/>
+        <NamedIndividual IRI="#Joseph_Porter"/>
+        <NamedIndividual IRI="#Martha_Carrier"/>
+        <NamedIndividual IRI="#Rebecca_Nurse"/>
+        <NamedIndividual IRI="#Samuell_Sewall"/>
+        <NamedIndividual IRI="#Sarah_Good"/>
+        <NamedIndividual IRI="#Susannah_Martin"/>
+        <NamedIndividual IRI="#Thomas_Danforth"/>
+        <NamedIndividual IRI="#Thomas_Putnam"/>
+        <NamedIndividual IRI="#Tituba"/>
+    </DifferentIndividuals>
+    <DifferentIndividuals>
+        <NamedIndividual IRI="#Ann_Putnam"/>
+        <NamedIndividual IRI="#Bridget_Bishop"/>
+        <NamedIndividual IRI="#Elizabeth_Proctor"/>
+        <NamedIndividual IRI="#Giles_Corey"/>
+        <NamedIndividual IRI="#John_Hawthorne"/>
+        <NamedIndividual IRI="#John_Porter"/>
+        <NamedIndividual IRI="#John_Proctor"/>
+        <NamedIndividual IRI="#Martha_Carrier"/>
+        <NamedIndividual IRI="#Rebecca_Nurse"/>
+        <NamedIndividual IRI="#Samuell_Sewall"/>
+        <NamedIndividual IRI="#Sarah_Good"/>
+        <NamedIndividual IRI="#Susannah_Martin"/>
+        <NamedIndividual IRI="#Thomas_Danforth"/>
+        <NamedIndividual IRI="#Thomas_Putnam"/>
+        <NamedIndividual IRI="#Tituba"/>
+    </DifferentIndividuals>
+    <DifferentIndividuals>
+        <NamedIndividual IRI="#Bridget_Bishop"/>
+        <NamedIndividual IRI="#Elizabeth_Proctor"/>
+        <NamedIndividual IRI="#Giles_Corey"/>
+        <NamedIndividual IRI="#John_Hawthorne"/>
+        <NamedIndividual IRI="#John_Porter"/>
+        <NamedIndividual IRI="#John_Proctor"/>
+        <NamedIndividual IRI="#Martha_Carrier"/>
+        <NamedIndividual IRI="#Rebecca_Nurse"/>
+        <NamedIndividual IRI="#Samuell_Sewall"/>
+        <NamedIndividual IRI="#Sarah_Good"/>
+        <NamedIndividual IRI="#Susannah_Martin"/>
+        <NamedIndividual IRI="#Thomas_Danforth"/>
+        <NamedIndividual IRI="#Thomas_Putnam"/>
+        <NamedIndividual IRI="#Tituba"/>
+    </DifferentIndividuals>
+    <DifferentIndividuals>
+        <NamedIndividual IRI="#Bridget_Bishop"/>
+        <NamedIndividual IRI="#Elizabeth_Proctor"/>
+        <NamedIndividual IRI="#Giles_Corey"/>
+        <NamedIndividual IRI="#John_Hawthorne"/>
+        <NamedIndividual IRI="#John_Proctor"/>
+        <NamedIndividual IRI="#Martha_Carrier"/>
+        <NamedIndividual IRI="#Rebecca_Nurse"/>
+        <NamedIndividual IRI="#Samuell_Sewall"/>
+        <NamedIndividual IRI="#Sarah_Good"/>
+        <NamedIndividual IRI="#Susannah_Martin"/>
+        <NamedIndividual IRI="#Thomas_Danforth"/>
+        <NamedIndividual IRI="#Thomas_Putnam"/>
+        <NamedIndividual IRI="#Tituba"/>
+    </DifferentIndividuals>
+    <DifferentIndividuals>
+        <NamedIndividual IRI="#Bridget_Bishop"/>
+        <NamedIndividual IRI="#Elizabeth_Proctor"/>
+        <NamedIndividual IRI="#Giles_Corey"/>
+        <NamedIndividual IRI="#John_Hawthorne"/>
+        <NamedIndividual IRI="#John_Proctor"/>
+        <NamedIndividual IRI="#Martha_Carrier"/>
+        <NamedIndividual IRI="#Rebecca_Nurse"/>
+        <NamedIndividual IRI="#Samuell_Sewall"/>
+        <NamedIndividual IRI="#Sarah_Good"/>
+        <NamedIndividual IRI="#Susannah_Martin"/>
+        <NamedIndividual IRI="#Thomas_Danforth"/>
+        <NamedIndividual IRI="#Tituba"/>
+    </DifferentIndividuals>
+    <DifferentIndividuals>
+        <NamedIndividual IRI="#Bridget_Bishop"/>
+        <NamedIndividual IRI="#Elizabeth_Proctor"/>
+        <NamedIndividual IRI="#Giles_Corey"/>
+        <NamedIndividual IRI="#John_Hawthorne"/>
+        <NamedIndividual IRI="#John_Proctor"/>
+        <NamedIndividual IRI="#Martha_Carrier"/>
+        <NamedIndividual IRI="#Rebecca_Nurse"/>
+        <NamedIndividual IRI="#Samuell_Sewall"/>
+        <NamedIndividual IRI="#Sarah_Good"/>
+        <NamedIndividual IRI="#Thomas_Danforth"/>
+        <NamedIndividual IRI="#Tituba"/>
+    </DifferentIndividuals>
+    <DifferentIndividuals>
+        <NamedIndividual IRI="#Bridget_Bishop"/>
+        <NamedIndividual IRI="#Elizabeth_Proctor"/>
+        <NamedIndividual IRI="#John_Hawthorne"/>
+        <NamedIndividual IRI="#John_Proctor"/>
+        <NamedIndividual IRI="#Martha_Carrier"/>
+        <NamedIndividual IRI="#Rebecca_Nurse"/>
+        <NamedIndividual IRI="#Samuell_Sewall"/>
+        <NamedIndividual IRI="#Sarah_Good"/>
+        <NamedIndividual IRI="#Thomas_Danforth"/>
+        <NamedIndividual IRI="#Tituba"/>
+    </DifferentIndividuals>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#dislikes"/>
+        <NamedIndividual IRI="#Ann_Putnam"/>
+        <NamedIndividual IRI="#John_Porter"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#likes"/>
+        <NamedIndividual IRI="#Ann_Putnam"/>
+        <NamedIndividual IRI="#Bridget_Bishop"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#relative_of"/>
+        <NamedIndividual IRI="#Ann_Putnam"/>
+        <NamedIndividual IRI="#Thomas_Putnam"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#dislikes"/>
+        <NamedIndividual IRI="#Elizabeth_Proctor"/>
+        <NamedIndividual IRI="#Bridget_Bishop"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#likes"/>
+        <NamedIndividual IRI="#Elizabeth_Proctor"/>
+        <NamedIndividual IRI="#Rebecca_Nurse"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#likes"/>
+        <NamedIndividual IRI="#Elizabeth_Proctor"/>
+        <NamedIndividual IRI="#Sarah_Good"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#likes"/>
+        <NamedIndividual IRI="#Giles_Corey"/>
+        <NamedIndividual IRI="#Elizabeth_Proctor"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#likes"/>
+        <NamedIndividual IRI="#Giles_Corey"/>
+        <NamedIndividual IRI="#John_Proctor"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#dislikes"/>
+        <NamedIndividual IRI="#John_Porter"/>
+        <NamedIndividual IRI="#Thomas_Putnam"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#likes"/>
+        <NamedIndividual IRI="#John_Porter"/>
+        <NamedIndividual IRI="#Elizabeth_Proctor"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#likes"/>
+        <NamedIndividual IRI="#John_Porter"/>
+        <NamedIndividual IRI="#John_Proctor"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#relative_of"/>
+        <NamedIndividual IRI="#John_Proctor"/>
+        <NamedIndividual IRI="#Elizabeth_Proctor"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#dislikes"/>
+        <NamedIndividual IRI="#Joseph_Porter"/>
+        <NamedIndividual IRI="#Thomas_Putnam"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#likes"/>
+        <NamedIndividual IRI="#Joseph_Porter"/>
+        <NamedIndividual IRI="#Ann_Putnam"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#likes"/>
+        <NamedIndividual IRI="#Joseph_Porter"/>
+        <NamedIndividual IRI="#John_Proctor"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#relative_of"/>
+        <NamedIndividual IRI="#Joseph_Porter"/>
+        <NamedIndividual IRI="#John_Porter"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#dislikes"/>
+        <NamedIndividual IRI="#Martha_Carrier"/>
+        <NamedIndividual IRI="#Tituba"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#likes"/>
+        <NamedIndividual IRI="#Rebecca_Nurse"/>
+        <NamedIndividual IRI="#Tituba"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#dislikes"/>
+        <NamedIndividual IRI="#Sarah_Good"/>
+        <NamedIndividual IRI="#Bridget_Bishop"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#dislikes"/>
+        <NamedIndividual IRI="#Sarah_Good"/>
+        <NamedIndividual IRI="#Elizabeth_Proctor"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#dislikes"/>
+        <NamedIndividual IRI="#Sarah_Good"/>
+        <NamedIndividual IRI="#John_Proctor"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#dislikes"/>
+        <NamedIndividual IRI="#Sarah_Good"/>
+        <NamedIndividual IRI="#Rebecca_Nurse"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#likes"/>
+        <NamedIndividual IRI="#Susannah_Martin"/>
+        <NamedIndividual IRI="#Giles_Corey"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#likes"/>
+        <NamedIndividual IRI="#Susannah_Martin"/>
+        <NamedIndividual IRI="#Tituba"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#dislikes"/>
+        <NamedIndividual IRI="#Thomas_Putnam"/>
+        <NamedIndividual IRI="#Bridget_Bishop"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#dislikes"/>
+        <NamedIndividual IRI="#Thomas_Putnam"/>
+        <NamedIndividual IRI="#Elizabeth_Proctor"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#dislikes"/>
+        <NamedIndividual IRI="#Thomas_Putnam"/>
+        <NamedIndividual IRI="#John_Porter"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#dislikes"/>
+        <NamedIndividual IRI="#Thomas_Putnam"/>
+        <NamedIndividual IRI="#John_Proctor"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#likes"/>
+        <NamedIndividual IRI="#Thomas_Putnam"/>
+        <NamedIndividual IRI="#Giles_Corey"/>
+    </ObjectPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#Age"/>
+        <NamedIndividual IRI="#Ann_Putnam"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">20</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#Profession"/>
+        <NamedIndividual IRI="#Ann_Putnam"/>
+        <Literal>Unemployed</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#has_Social_Status"/>
+        <NamedIndividual IRI="#Ann_Putnam"/>
+        <Literal>Rich</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#Age"/>
+        <NamedIndividual IRI="#Bridget_Bishop"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">60</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#Profession"/>
+        <NamedIndividual IRI="#Bridget_Bishop"/>
+        <Literal>tavern keeper</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#has_Social_Status"/>
+        <NamedIndividual IRI="#Bridget_Bishop"/>
+        <Literal>Middle</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#Age"/>
+        <NamedIndividual IRI="#Elizabeth_Proctor"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">40</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#Profession"/>
+        <NamedIndividual IRI="#Elizabeth_Proctor"/>
+        <Literal>housewife</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#has_Social_Status"/>
+        <NamedIndividual IRI="#Elizabeth_Proctor"/>
+        <Literal>Middle</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#Age"/>
+        <NamedIndividual IRI="#Giles_Corey"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">72</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#Profession"/>
+        <NamedIndividual IRI="#Giles_Corey"/>
+        <Literal>farmer</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#has_Social_Status"/>
+        <NamedIndividual IRI="#Giles_Corey"/>
+        <Literal>Poor</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#Age"/>
+        <NamedIndividual IRI="#John_Hawthorne"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">22</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#Severity"/>
+        <NamedIndividual IRI="#John_Hawthorne"/>
+        <Literal>Lenient</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#has_Social_Status"/>
+        <NamedIndividual IRI="#John_Hawthorne"/>
+        <Literal>Rich</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#Age"/>
+        <NamedIndividual IRI="#John_Porter"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">55</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#Profession"/>
+        <NamedIndividual IRI="#John_Porter"/>
+        <Literal>trader</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#has_Social_Status"/>
+        <NamedIndividual IRI="#John_Porter"/>
+        <Literal>Rich</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#Age"/>
+        <NamedIndividual IRI="#John_Proctor"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">46</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#Profession"/>
+        <NamedIndividual IRI="#John_Proctor"/>
+        <Literal>tavern keeper</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#has_Social_Status"/>
+        <NamedIndividual IRI="#John_Proctor"/>
+        <Literal>Middle</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#Age"/>
+        <NamedIndividual IRI="#Joseph_Porter"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">22</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#Profession"/>
+        <NamedIndividual IRI="#Joseph_Porter"/>
+        <Literal>trader</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#has_Social_Status"/>
+        <NamedIndividual IRI="#Joseph_Porter"/>
+        <Literal>Rich</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#Age"/>
+        <NamedIndividual IRI="#Martha_Carrier"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">50</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#Profession"/>
+        <NamedIndividual IRI="#Martha_Carrier"/>
+        <Literal>farmer</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#has_Social_Status"/>
+        <NamedIndividual IRI="#Martha_Carrier"/>
+        <Literal>Poor</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#Age"/>
+        <NamedIndividual IRI="#Rebecca_Nurse"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">50</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#Profession"/>
+        <NamedIndividual IRI="#Rebecca_Nurse"/>
+        <Literal>housewife</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#has_Social_Status"/>
+        <NamedIndividual IRI="#Rebecca_Nurse"/>
+        <Literal>Poor</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#Severity"/>
+        <NamedIndividual IRI="#Samuell_Sewall"/>
+        <Literal>Moderate</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#has_Social_Status"/>
+        <NamedIndividual IRI="#Samuell_Sewall"/>
+        <Literal>Rich</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
+        <NamedIndividual IRI="#Samuell_Sewall"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">30</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#Age"/>
+        <NamedIndividual IRI="#Sarah_Good"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">46</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#Profession"/>
+        <NamedIndividual IRI="#Sarah_Good"/>
+        <Literal>beggar</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#has_Social_Status"/>
+        <NamedIndividual IRI="#Sarah_Good"/>
+        <Literal>Poor</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#Profession"/>
+        <NamedIndividual IRI="#Susannah_Martin"/>
+        <Literal>widow</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#has_Social_Status"/>
+        <NamedIndividual IRI="#Susannah_Martin"/>
+        <Literal>Rich</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#Severity"/>
+        <NamedIndividual IRI="#Thomas_Danforth"/>
+        <Literal>Aggressive</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
+        <NamedIndividual IRI="#Thomas_Danforth"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">42</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#Age"/>
+        <NamedIndividual IRI="#Thomas_Putnam"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">55</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#Profession"/>
+        <NamedIndividual IRI="#Thomas_Putnam"/>
+        <Literal>farmer</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#has_Social_Status"/>
+        <NamedIndividual IRI="#Thomas_Putnam"/>
+        <Literal>Rich</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#Age"/>
+        <NamedIndividual IRI="#Tituba"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">18</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#Profession"/>
+        <NamedIndividual IRI="#Tituba"/>
+        <Literal>Servant</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#has_Social_Status"/>
+        <NamedIndividual IRI="#Tituba"/>
+        <Literal>Slave</Literal>
+    </DataPropertyAssertion>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#dislikes"/>
+        <ObjectProperty IRI="#Relationships"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#likes"/>
+        <ObjectProperty IRI="#Relationships"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#relative_of"/>
+        <ObjectProperty IRI="#Relationships"/>
+    </SubObjectPropertyOf>
+    <SymmetricObjectProperty>
+        <ObjectProperty IRI="#dislikes"/>
+    </SymmetricObjectProperty>
+    <SymmetricObjectProperty>
+        <ObjectProperty IRI="#likes"/>
+    </SymmetricObjectProperty>
+    <SymmetricObjectProperty>
+        <ObjectProperty IRI="#relative_of"/>
+    </SymmetricObjectProperty>
+    <DataPropertyDomain>
+        <DataProperty IRI="#Age"/>
+        <Class IRI="#Person"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#Profession"/>
+        <Class IRI="#Person"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#Severity"/>
+        <Class IRI="#Judge"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#has_Social_Status"/>
+        <Class IRI="#Person"/>
+    </DataPropertyDomain>
+    <DataPropertyRange>
+        <DataProperty IRI="#Age"/>
+        <Datatype abbreviatedIRI="xsd:int"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#Profession"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#Severity"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#has_Social_Status"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi -->
+

@@ -6,11 +6,13 @@ import agents.TownieAgent;
 import jade.core.behaviours.CyclicBehaviour;
 import jade.lang.acl.ACLMessage;
 import jade.lang.acl.MessageTemplate;
+import ui.GridManager;
 
 public class GossipListeningBehavior extends CyclicBehaviour {
     private static final long serialVersionUID = -8321411273717125553L;
 	TownieAgent agent;
     Random random = new Random();
+    GridManager instance = GridManager.getInstance();
     
     public GossipListeningBehavior(TownieAgent a) {
         super(a);
@@ -21,7 +23,7 @@ public class GossipListeningBehavior extends CyclicBehaviour {
     public void action() {
     	
     	MessageTemplate mt = MessageTemplate.and(
-              MessageTemplate.MatchConversationId("gossip"+ System.currentTimeMillis()%10000 + "_"),
+              MessageTemplate.MatchConversationId("gossip"+ "_"),
               MessageTemplate.MatchPerformative(ACLMessage.INFORM));
         ACLMessage acl = myAgent.receive(mt);
 
@@ -35,14 +37,17 @@ public class GossipListeningBehavior extends CyclicBehaviour {
             if (r > 0.3 && currentRelationship != 10) { // da ne priema kluki za semeistvoto si
                 handleMessage(content, targetName);
             } else{
-                System.out.println(agent.getLocalName() + ": " + acl.getSender().getLocalName() + ", I don't trust you!");
+            	instance.logToUI
+            	(agent.getLocalName() + ": " + acl.getSender().getLocalName() + ", I don't trust you!");
             }
+        } else {
+        	block();
         }
     }
     
     public void handleMessage(String content, String targetName) {
                                      
-            int r = random.nextInt(-4, -1);
+            int r = random.nextInt(-6, -2);
             Integer currentValue = agent.getRelationships().getOrDefault(targetName, 0);
 //            System.out.println(myAgent.getLocalName());
 
@@ -52,7 +57,8 @@ public class GossipListeningBehavior extends CyclicBehaviour {
             
 //            System.out.println(agent.getRelationships());
 
-            System.out.println(agent.getLocalName() + ": Now that I think about it, " + targetName +" isn't that cool of a guy");
+       
+            instance.logToUI(agent.getLocalName() + ": Now that I think about it, " + targetName +" isn't that cool of a guy");
         
     }
 }

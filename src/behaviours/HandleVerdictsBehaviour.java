@@ -3,7 +3,7 @@ package behaviours;
 import java.util.Set;
 
 import agents.TownieAgent;
-import helpers.AgentFinder;
+import helpers.AgentRegistry;
 import helpers.Helpers;
 import jade.core.AID;
 
@@ -11,6 +11,7 @@ import jade.core.behaviours.OneShotBehaviour;
 
 import jade.lang.acl.ACLMessage;
 import jade.lang.acl.MessageTemplate;
+import ui.GridManager;
 
 
 public class HandleVerdictsBehaviour extends OneShotBehaviour	{
@@ -21,6 +22,8 @@ public class HandleVerdictsBehaviour extends OneShotBehaviour	{
 	private int receivedResponses;
 	private int guiltyVotes;
 	private int notGuiltyVotes;
+    GridManager instance = GridManager.getInstance();
+
     final jade.core.Agent currentAgent = myAgent;
 	public HandleVerdictsBehaviour(AID accusedAID,  Set<AID> judgesAIDs) {
 		super();
@@ -55,20 +58,17 @@ public class HandleVerdictsBehaviour extends OneShotBehaviour	{
 		        	    String accusedAgentName = accusedAID.getLocalName();
 
 		    	        if (guiltyVotes > notGuiltyVotes) {
-		    	        	Set<AID> recipientAIDs = AgentFinder.findAgentsAIDsByTypeExcludingSelfAndTarget(
+		    	        	Set<AID> recipientAIDs = AgentRegistry.findAgentsAIDsByTypeExcludingSelfAndTarget(
 		    	        			myAgent, "townie", accusedAgentName);
 		    	        	sendRelationshipUpdate("REMOVE", recipientAIDs, accusedAgentName );       
-//		    	        	   System.out.println(((TownieAgent) myAgent).getRelationships().get(accusedAgentName));
 	    	        		((TownieAgent) myAgent).removeFromRelationships(accusedAgentName);
-//		    	        	   System.out.println(((TownieAgent) myAgent).getRelationships().get(accusedAgentName));
 
 	    	        	    int towniesExceptTargetAIDsSize = recipientAIDs.size();
 	    	        	    myAgent.addBehaviour(new ExecutionWaitBehaviour(accusedAgentName, accusedAID, towniesExceptTargetAIDsSize));
 		    	            done();
 		    	        } else {
-		    	            System.out.println(accusedAID.getLocalName() + " has been found not guilty");
-		    	            Helpers.accusationInProgress = false;
-
+		    	        	instance.logToUI(accusedAID.getLocalName() + " has been found not guilty");
+		    	        	Helpers.releaseLock(myAgent.getLocalName());
 		    	        }
 	        		}
 

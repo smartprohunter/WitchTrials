@@ -38,6 +38,9 @@
         <DataProperty IRI="#Age"/>
     </Declaration>
     <Declaration>
+        <DataProperty IRI="#Gender"/>
+    </Declaration>
+    <Declaration>
         <DataProperty IRI="#Profession"/>
     </Declaration>
     <Declaration>
@@ -426,6 +429,11 @@
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">20</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
+        <DataProperty IRI="#Gender"/>
+        <NamedIndividual IRI="#Ann_Putnam"/>
+        <Literal>Female</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
         <DataProperty IRI="#Profession"/>
         <NamedIndividual IRI="#Ann_Putnam"/>
         <Literal>Unemployed</Literal>
@@ -439,6 +447,11 @@
         <DataProperty IRI="#Age"/>
         <NamedIndividual IRI="#Bridget_Bishop"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">60</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#Gender"/>
+        <NamedIndividual IRI="#Bridget_Bishop"/>
+        <Literal>Female</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#Profession"/>
@@ -456,6 +469,11 @@
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">40</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
+        <DataProperty IRI="#Gender"/>
+        <NamedIndividual IRI="#Elizabeth_Proctor"/>
+        <Literal>Female</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
         <DataProperty IRI="#Profession"/>
         <NamedIndividual IRI="#Elizabeth_Proctor"/>
         <Literal>housewife</Literal>
@@ -471,6 +489,11 @@
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">72</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
+        <DataProperty IRI="#Gender"/>
+        <NamedIndividual IRI="#Giles_Corey"/>
+        <Literal>Male</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
         <DataProperty IRI="#Profession"/>
         <NamedIndividual IRI="#Giles_Corey"/>
         <Literal>farmer</Literal>
@@ -484,6 +507,11 @@
         <DataProperty IRI="#Age"/>
         <NamedIndividual IRI="#John_Hawthorne"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">22</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#Gender"/>
+        <NamedIndividual IRI="#John_Hawthorne"/>
+        <Literal>Male</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#Severity"/>
@@ -501,6 +529,11 @@
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">55</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
+        <DataProperty IRI="#Gender"/>
+        <NamedIndividual IRI="#John_Porter"/>
+        <Literal>Male</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
         <DataProperty IRI="#Profession"/>
         <NamedIndividual IRI="#John_Porter"/>
         <Literal>trader</Literal>
@@ -514,6 +547,11 @@
         <DataProperty IRI="#Age"/>
         <NamedIndividual IRI="#John_Proctor"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">46</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#Gender"/>
+        <NamedIndividual IRI="#John_Proctor"/>
+        <Literal>Male</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#Profession"/>
@@ -531,6 +569,11 @@
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">22</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
+        <DataProperty IRI="#Gender"/>
+        <NamedIndividual IRI="#Joseph_Porter"/>
+        <Literal>Male</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
         <DataProperty IRI="#Profession"/>
         <NamedIndividual IRI="#Joseph_Porter"/>
         <Literal>trader</Literal>
@@ -544,6 +587,11 @@
         <DataProperty IRI="#Age"/>
         <NamedIndividual IRI="#Martha_Carrier"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">50</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#Gender"/>
+        <NamedIndividual IRI="#Martha_Carrier"/>
+        <Literal>Female</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#Profession"/>
@@ -561,6 +609,11 @@
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">50</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
+        <DataProperty IRI="#Gender"/>
+        <NamedIndividual IRI="#Rebecca_Nurse"/>
+        <Literal>Female</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
         <DataProperty IRI="#Profession"/>
         <NamedIndividual IRI="#Rebecca_Nurse"/>
         <Literal>housewife</Literal>
@@ -569,6 +622,16 @@
         <DataProperty IRI="#has_Social_Status"/>
         <NamedIndividual IRI="#Rebecca_Nurse"/>
         <Literal>Poor</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#Age"/>
+        <NamedIndividual IRI="#Samuell_Sewall"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">40</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#Gender"/>
+        <NamedIndividual IRI="#Samuell_Sewall"/>
+        <Literal>Male</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#Severity"/>
@@ -581,14 +644,14 @@
         <Literal>Rich</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
-        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
-        <NamedIndividual IRI="#Samuell_Sewall"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">30</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
         <DataProperty IRI="#Age"/>
         <NamedIndividual IRI="#Sarah_Good"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">46</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#Gender"/>
+        <NamedIndividual IRI="#Sarah_Good"/>
+        <Literal>Female</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#Profession"/>
@@ -601,6 +664,11 @@
         <Literal>Poor</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
+        <DataProperty IRI="#Gender"/>
+        <NamedIndividual IRI="#Susannah_Martin"/>
+        <Literal>Female</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
         <DataProperty IRI="#Profession"/>
         <NamedIndividual IRI="#Susannah_Martin"/>
         <Literal>widow</Literal>
@@ -609,6 +677,11 @@
         <DataProperty IRI="#has_Social_Status"/>
         <NamedIndividual IRI="#Susannah_Martin"/>
         <Literal>Rich</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#Gender"/>
+        <NamedIndividual IRI="#Thomas_Danforth"/>
+        <Literal>Male</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#Severity"/>
@@ -626,6 +699,11 @@
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">55</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
+        <DataProperty IRI="#Gender"/>
+        <NamedIndividual IRI="#Thomas_Putnam"/>
+        <Literal>Male</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
         <DataProperty IRI="#Profession"/>
         <NamedIndividual IRI="#Thomas_Putnam"/>
         <Literal>farmer</Literal>
@@ -639,6 +717,11 @@
         <DataProperty IRI="#Age"/>
         <NamedIndividual IRI="#Tituba"/>
         <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">18</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#Gender"/>
+        <NamedIndividual IRI="#Tituba"/>
+        <Literal>Female</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#Profession"/>
@@ -676,6 +759,14 @@
         <Class IRI="#Person"/>
     </DataPropertyDomain>
     <DataPropertyDomain>
+        <DataProperty IRI="#Gender"/>
+        <Class IRI="#Judge"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#Gender"/>
+        <Class IRI="#Townie"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
         <DataProperty IRI="#Profession"/>
         <Class IRI="#Person"/>
     </DataPropertyDomain>
@@ -690,6 +781,10 @@
     <DataPropertyRange>
         <DataProperty IRI="#Age"/>
         <Datatype abbreviatedIRI="xsd:int"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#Gender"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
     </DataPropertyRange>
     <DataPropertyRange>
         <DataProperty IRI="#Profession"/>

@@ -9,16 +9,14 @@ import jade.domain.FIPAException;
 import jade.domain.FIPAAgentManagement.DFAgentDescription;
 import jade.domain.FIPAAgentManagement.ServiceDescription;
 
-public class JudgeAgent  extends Agent{
+public class JudgeAgent  extends RegistryAgent{
 
 	private static final long serialVersionUID = -2397587730348445641L;
 	private Map<String, String> args;
 	private String severity;
-//	private static int SEVERITY = 10;
 	@SuppressWarnings("unchecked")
 	@Override
-	protected void setup() {
-		 super.setup();
+	protected void onSetup() {
 	        DFAgentDescription dfd = new DFAgentDescription();
 	        dfd.setName(getAID());
 	        Object[] args = getArguments();
@@ -39,6 +37,10 @@ public class JudgeAgent  extends Agent{
 	        }
 	        addBehaviour(new DeliberateBehaviour(this.severity));
 	        
+	}
+	@Override
+	protected String getAgentType() {
+		return "judge";
 	}
 
 }

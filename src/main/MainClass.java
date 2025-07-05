@@ -2,8 +2,12 @@ package main;
 
 import jade.core.Runtime;
 
+import java.sql.Timestamp;
+import java.time.LocalDateTime;
+
 import org.semanticweb.owlapi.model.OWLOntologyCreationException;
 
+import helpers.Helpers;
 import jade.core.Profile;
 import jade.core.ProfileImpl;
 import jade.wrapper.AgentContainer;
@@ -21,18 +25,17 @@ public class MainClass {
         Profile profile = new ProfileImpl();
         profile.setParameter(Profile.MAIN_HOST, "localhost");
         profile.setParameter(Profile.GUI, "true");
-      
+        System.setProperty("jade.util.Logger.level", "INFO");
         AgentContainer container = runtime.createMainContainer(profile);
         
         try {
-            // Create simulation manager
-            AgentController manager = container.createNewAgent(
+        		AgentController manager = container.createNewAgent(
                 "SimulationManager", 
                 "agents.TownieSimulationAgent", 
                 new Object[] {}
             );
             manager.start();
-            
+            Helpers.simulationStartTime = Timestamp.valueOf(LocalDateTime.now());
             System.out.println("Witch Trial Simulation started successfully.");
             
         } catch (Exception e) {

@@ -52,13 +52,9 @@ public class OntologyExtractor {
 
         
         Set<OWLNamedIndividual> individuals = getIndividuals(classIRI);
-// 	   int agentCount = 0;
 
         for (OWLNamedIndividual individual : individuals) {
-//			if (agentCount >= 3) {
-//        	    }
             Map<String, String> properties = new HashMap<>();
-//            agentCount ++;
             
 
             for (OWLDataPropertyAssertionAxiom axiom : ontology.getDataPropertyAssertionAxioms(individual)) {

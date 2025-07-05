@@ -1,16 +1,19 @@
 package behaviours;
 
 import agents.TownieAgent;
-import helpers.AgentFinder;
+import helpers.AgentRegistry;
 import jade.core.AID;
 import jade.core.behaviours.CyclicBehaviour;
 import jade.lang.acl.ACLMessage;
 import jade.lang.acl.MessageTemplate;
+import ui.GridManager;
 
 public class AccusationListeningBehavior extends CyclicBehaviour {
     
 	private static final long serialVersionUID = -2825541239299003734L;
 	private MessageTemplate mt;
+    GridManager instance = GridManager.getInstance();
+
     public AccusationListeningBehavior() {
         super();
             }
@@ -18,7 +21,7 @@ public class AccusationListeningBehavior extends CyclicBehaviour {
     @Override
     public void action() {
         mt = MessageTemplate.and(
-              MessageTemplate.MatchConversationId("accusation"+ System.currentTimeMillis()%10000 + "_"),
+              MessageTemplate.MatchConversationId("accusation"),
               MessageTemplate.MatchPerformative(ACLMessage.PROPOSE)
               ); 
         
@@ -41,31 +44,27 @@ public class AccusationListeningBehavior extends CyclicBehaviour {
             String accuser = parts[1];
             String accused = parts[2];
             
-            System.out.println(myAgent.getLocalName() + " received accusation: " + 
+            instance.logToUI(myAgent.getLocalName() + " received accusation: " + 
                                accuser + " is accusing " + accused);
-//            
        
-            AID accuserAID = AgentFinder.findOtherAgentAIDbyName(accuser, myAgent, "townie");
+            AID accuserAID = AgentRegistry.findOtherTownieAIDbyName(accused, myAgent);
         	ACLMessage reply = accusationMsg.createReply();
             reply.setPerformative(ACLMessage.INFORM);
-            reply.setConversationId("accuse response" + System.currentTimeMillis()%10000 + "_");
+            reply.setConversationId("accuse response" );
             reply.addReceiver(accuserAID);
-            
-            if (accuser != null && ((TownieAgent) myAgent).getRelationships().containsKey(accuser)) {
-                int relationship = ((TownieAgent) myAgent).getRelationships().get(accuser);
+
+                int relationship = ((TownieAgent) myAgent).getRelationships().get(accused);
                 if (relationship < 10) { 
                 
 		            reply.setContent("SUPPORT:TRUE");
 					myAgent.send(reply);
 
-//                System.out.println(myAgent.getAID().getLocalName() + 
-//                                  ": da mu hvurchi glavata na toq " + accused);
                 }
-            } else {
+             else {
 	            reply.setContent("SUPPORT:FALSE");
 				myAgent.send(reply);
 
-                System.out.println(myAgent.getLocalName() + ": ne sum suglasen s teb" + accuser);
+				instance.logToUI(myAgent.getLocalName() + ": I don't aggree that they are a witch," + accuser +".");
 
             }
 

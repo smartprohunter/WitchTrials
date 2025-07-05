@@ -38,7 +38,7 @@ public class UpdateRelationshipsBehaviour extends CyclicBehaviour {
             ((TownieAgent) myAgent).removeFromRelationships(executedAgentName);
             
         } else {
-            block(1000);
+            block();
         }
     }
 }

@@ -32,6 +32,8 @@ public class Helpers {
 	        try {
 	            if (lock.tryLock(1, TimeUnit.SECONDS)) {
 	                lockOwner.set(agentName);
+	                System.out.println(agentName + " is trying to acquire the lock...");
+
 	                return true;
 	            }
 	        } catch (InterruptedException e) {

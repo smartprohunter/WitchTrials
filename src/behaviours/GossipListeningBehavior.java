@@ -34,7 +34,7 @@ public class GossipListeningBehavior extends CyclicBehaviour {
             String targetName = parts[1];
             Integer currentRelationship = agent.getRelationships().getOrDefault(targetName, 0);
 
-            if (r > 0.3 && currentRelationship != 10) { // da ne priema kluki za semeistvoto si
+            if (r > 0.5 && currentRelationship != 10) { // da ne priema kluki za semeistvoto si
                 handleMessage(content, targetName);
             } else{
             	instance.logToUI

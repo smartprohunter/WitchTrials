@@ -94,21 +94,19 @@ import ui.GridManager;
 			
 	        case "Aggressive":
 	           
-	            convictionThreshold += 0.6; 
+	            convictionThreshold += 0.9; 
 	            break;
 	            
 	        case "Moderate":
-	            break;
+	            convictionThreshold += 0.5; 
 	            
 	        case "Lenient":
-	            convictionThreshold -= 0.2; 
 	            break;
 	            
 
 		}
 
 			double randomValue = Math.round(Math.random() * 100.0) / 100.0;
-		    return true;
-//		    		randomValue < convictionThreshold;
+		    return   		randomValue < convictionThreshold;
 		}
 	}

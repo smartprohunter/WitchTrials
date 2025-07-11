@@ -74,10 +74,12 @@ public class GridManager {
         }
         int newX = currentPos.x;
         int newY = currentPos.y;
-        
         boolean isValidPosition = false;
         
         while (!isValidPosition) {
+        	
+    	newX = currentPos.x;
+        newY = currentPos.y;
         int direction = (int) (Math.random() * 4);
       
         switch (direction) {
@@ -88,7 +90,7 @@ public class GridManager {
             newX = Math.min(gridSizeX - 1, currentPos.x + 1);
             break;
         case 2: // dolu 
-            newY = Math.min(gridSizeY - 1, currentPos.y + 1); // Fixed: was gridSizeX
+            newY = Math.min(gridSizeY - 1, currentPos.y + 1); 
             break;
         case 3: // lqvo 
             newX = Math.max(0, currentPos.x - 1);
@@ -100,12 +102,12 @@ public class GridManager {
         isValidPosition = true;
     }
         }
-
+        Point newPosition = new Point(newX, newY);
         // Update 
-        agentPositions.put(agentName, new Point(newX, newY));
+        agentPositions.put(agentName, newPosition);
         gridUI.updateAgentPosition(agentName, newX, newY, gender);
         
-        return new Point(newX, newY);
+        return newPosition;
     }
     
    

@@ -2,6 +2,7 @@ package behaviours;
 
 import agents.TownieAgent;
 import helpers.AgentRegistry;
+import helpers.Helpers;
 import jade.core.AID;
 import jade.core.behaviours.CyclicBehaviour;
 import jade.lang.acl.ACLMessage;
@@ -45,7 +46,7 @@ public class AccusationListeningBehavior extends CyclicBehaviour {
             String accused = parts[2];
             
             instance.logToUI(myAgent.getLocalName() + " received accusation: " + 
-                               accuser + " is accusing " + accused);
+                    accuser + " is accusing " + accused);
        
             AID accuserAID = AgentRegistry.findOtherTownieAIDbyName(accused, myAgent);
         	ACLMessage reply = accusationMsg.createReply();
@@ -54,7 +55,7 @@ public class AccusationListeningBehavior extends CyclicBehaviour {
             reply.addReceiver(accuserAID);
 
                 int relationship = ((TownieAgent) myAgent).getRelationships().get(accused);
-                if (relationship < 10) { 
+                if (relationship < 6|| (relationship < 4 && Helpers.hysteria >= 30)) { 
                 
 		            reply.setContent("SUPPORT:TRUE");
 					myAgent.send(reply);

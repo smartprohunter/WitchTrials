@@ -38,30 +38,22 @@ public class TownieActivitiesBehaviour extends OneShotBehaviour {
         
        
           double activityRoll = random.nextDouble();
-          System.out.println("roll:" + activityRoll);
-          System.out.println(Helpers.hysteria);
+//          System.out.println("roll:" + activityRoll);
        	  if (Helpers.tryAcquireLock(myAgent.getLocalName())) {
-		  try {
-		    if (activityRoll < 0.7 || (activityRoll < 0.4 && Helpers.hysteria > 25)|| (activityRoll < 0.2 && Helpers.hysteria > 50) ) { 
-		    	considerAccusing(samePositionTownies);
+		  
+			  if ((activityRoll > 0.2 && Helpers.hysteria > 50) ||
+					    (activityRoll > 0.4 && Helpers.hysteria > 25) ||
+					    (activityRoll > 0.6)) {
+					    considerAccusing(samePositionTownies);
+					} else {
+					    performGossip(samePositionTownies);
+					}
 
-		    }
-		        else { 
-			        performGossip(samePositionTownies);
-
-		             }
-		  } finally {
-			Helpers.releaseLock(myAgent.getLocalName());;
-		         }
-		    } else {
-//			    	Helpers.lock.unlock();
-		        System.out.println(Helpers.lock);    
-		        }
-         
 
         
         
     }
+	}
     
     private void performGossip(ArrayList<AID> samePositionTownies) {
         
@@ -95,6 +87,8 @@ public class TownieActivitiesBehaviour extends OneShotBehaviour {
         instance.logToUI
         (myAgent.getLocalName() + ": Hey, " + 
                 receiverAID.getLocalName() + ", " + gossipContent);
+		Helpers.releaseLock(myAgent.getLocalName());;
+
     }
     
     private String getRandomGossipMessage(String subjectName) {
@@ -131,18 +125,12 @@ public class TownieActivitiesBehaviour extends OneShotBehaviour {
     
    
     private void considerAccusing(ArrayList<AID> samePositionTownies) {
-    	if (AgentRegistry.findAgentAIDsByType(agent, "townie").size() <=2) {
-    		System.out.println("No more townies to accuse.");
-    		return;
-    	}
         String targetTownieName = agent.getLeastLikedTownie();
         Map<String, Integer> agentRelationships = ((TownieAgent) myAgent).getRelationships();
         AID targetAID = AgentRegistry.findOtherTownieAIDbyName(targetTownieName, myAgent );
         Integer targetRelationship = agentRelationships.getOrDefault(targetTownieName, 0);
         System.out.println("target r" + targetRelationship);
-        System.out.println(!samePositionTownies.contains(targetAID));
-        System.out.println(targetAID != null);
-        if ((targetRelationship < 1 || (targetRelationship < 5 && Helpers.hysteria >= 50)) && !samePositionTownies.contains(targetAID) && targetAID != null ) { 
+        if ((targetRelationship < 4 || (targetRelationship < 7 && Helpers.hysteria >= 50)) && !samePositionTownies.contains(targetAID) && targetAID != null ) { 
             System.out.println(targetAID);
 
             ACLMessage acl = new ACLMessage(ACLMessage.PROPOSE);
@@ -156,9 +144,12 @@ public class TownieActivitiesBehaviour extends OneShotBehaviour {
             acl.setConversationId(conversationId);
             myAgent.send(acl);
             instance.logToUI
-            (myAgent.getAID().getLocalName() + ": " +  " is a witch!");
+            (myAgent.getAID().getLocalName() + ": " + targetTownieName + " is a witch!");
             
             agent.addBehaviour(new CollectAccusationSupportBehaviour(agent, targetAID, samePositionTownies));
+        }
+        else {
+        	performGossip(samePositionTownies);
         }
         
     }

@@ -72,6 +72,7 @@ public class CollectAccusationSupportBehaviour extends Behaviour {
     	   }
         boolean isDone =  receivedResponses >= towniesExceptTarget.size() || trialHeld;
         if(!trialHeld && isDone) {
+        	System.out.println("lock dropped collect accusation");
         	Helpers.releaseLock(myAgent.getLocalName());
         }
         return isDone;

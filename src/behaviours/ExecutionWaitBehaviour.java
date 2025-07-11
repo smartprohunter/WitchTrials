@@ -13,7 +13,7 @@ import agents.TownieAgent;
 import helpers.AgentRegistry;
 import helpers.Helpers;
 
-public class ExecutionWaitBehaviour extends CyclicBehaviour {
+public  class ExecutionWaitBehaviour extends CyclicBehaviour {
     
     private static final long serialVersionUID = 1L;
     
@@ -41,6 +41,7 @@ public class ExecutionWaitBehaviour extends CyclicBehaviour {
     
     private void completeExecution() {
         try {
+        	System.out.println("executing");
 			TownieAgent accusedAgent = AgentRegistry.getTownie(accusedAID);
             Helpers.hysteria += 10 * accusedAgent.getSocialStatus();
             System.out.println(Helpers.hysteria) ;

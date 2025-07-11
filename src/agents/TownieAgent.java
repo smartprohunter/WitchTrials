@@ -46,7 +46,7 @@ public class TownieAgent extends RegistryAgent {
         if (args[0] instanceof Map) {
         this.onthologyArguments = (Map<String, String>) args[0];
         }
-        System.out.println(onthologyArguments);
+//        System.out.println(onthologyArguments);
         DFAgentDescription dfd = new DFAgentDescription();
         dfd.setName(getAID());
         ServiceDescription serviceDesc = new ServiceDescription();
@@ -80,29 +80,35 @@ public class TownieAgent extends RegistryAgent {
 
     public void initializeRelationships(ArrayList<String> townies, Map<String, String> preferences) {
         Random random = new Random();
-        int value;
 
         for (String townie : townies) {
-     
-        	String name = preferences.getOrDefault(townie, "noPreference");
-        	switch (name) {
-            case "likes":
-                value = random.nextInt(6, 9);
-                break;
-            case "dislikes":
-                value = random.nextInt(0, 3);
-                break;
-            case "relative_of":
-                value = 10;
-                break;
-            default:
-                value = random.nextInt(4, 6);
-                break;
-        }
+            int value;
+
+            if ("Tituba".equals(townie)) {
+                value = -6;
+            } else {
+                String preference = preferences.getOrDefault(townie, "noPreference");
+
+                switch (preference) {
+                    case "likes":
+                        value = random.nextInt(6, 9); // 6 to 8 inclusive
+                        break;
+                    case "dislikes":
+                        value = random.nextInt(0, 3); // 0 to 2 inclusive
+                        break;
+                    case "relative_of":
+                        value = 10;
+                        break;
+                    default:
+                        value = random.nextInt(4, 6); // 4 to 5 inclusive
+                        break;
+                }
+            }
+
             relationships.put(townie, value);
         }
     }
-   
+
    
     public String getLeastLikedTownie() {
     		

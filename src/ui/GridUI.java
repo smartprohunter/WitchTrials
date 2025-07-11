@@ -41,12 +41,12 @@ public class GridUI extends JFrame {
     private BufferedImage femaleVillagerImage;
     
     // Enhanced color scheme
-    private static final Color BACKGROUND_COLOR = new Color(45, 35, 30);
-    private static final Color GRID_COLOR = new Color(80, 70, 60);
-    private static final Color TEXT_COLOR = new Color(240, 230, 220);
-    private static final Color GRAVEYARD_COLOR = new Color(25, 20, 15);
-    private static final Color PANEL_BORDER_COLOR = new Color(139, 69, 19);
-    private static final Color BORDER_TEXT_COLOR = new Color(255, 215, 0); 
+    private static final Color BACKGROUND_COLOR = new Color(245, 245, 245);       
+    private static final Color GRID_COLOR = new Color(200, 200, 200);            
+    private static final Color TEXT_COLOR = new Color(30, 30, 30);               
+    private static final Color GRAVEYARD_COLOR = new Color(230, 230, 230);       
+    private static final Color PANEL_BORDER_COLOR = new Color(180, 180, 180);    
+    private static final Color BORDER_TEXT_COLOR = new Color(50, 50, 150);  
     
     // Graveyard configuration
     private static final int GRAVEYARD_WIDTH = 8;
@@ -83,71 +83,47 @@ public class GridUI extends JFrame {
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setResizable(true);
         setBackground(BACKGROUND_COLOR);
-        
-        // Create main layout
-        setLayout(new BorderLayout(0, 0)); // Remove gaps
-        getContentPane().setBackground(BACKGROUND_COLOR); // Set content pane background
-        
-        // Add status bar at top
+        getContentPane().setBackground(BACKGROUND_COLOR);
+        setLayout(new BorderLayout(0, 0));
+
         add(createStatusPanel(), BorderLayout.NORTH);
-        
-        // Create main content area
-        JPanel mainPanel = new JPanel(new BorderLayout(5, 5)); // Reduce gaps
+        JPanel mainPanel = new JPanel(new BorderLayout(5, 5));
         mainPanel.setBackground(BACKGROUND_COLOR);
-        mainPanel.setBorder(BorderFactory.createEmptyBorder(5, 5, 5, 5)); // Reduce padding
-        
-        // Create left panel for grid and graveyard
-        JPanel leftPanel = createLeftPanel();
-        mainPanel.add(leftPanel, BorderLayout.CENTER);
-        
-        // Create right panel for communications
-        JPanel rightPanel = createRightPanel();
-        mainPanel.add(rightPanel, BorderLayout.EAST);
-        
+        mainPanel.setBorder(BorderFactory.createEmptyBorder(5, 5, 5, 5));
+        mainPanel.add(createLeftPanel(), BorderLayout.CENTER);
+        mainPanel.add(createRightPanel(), BorderLayout.EAST);
+
         add(mainPanel, BorderLayout.CENTER);
-        
         pack();
         setLocationRelativeTo(null);
         setVisible(true);
-        
-        // Update counters initially
         updateCounters();
     }
     
+
     private JPanel createStatusPanel() {
         JPanel statusPanel = new JPanel(new BorderLayout());
-        statusPanel.setBackground(new Color(35, 25, 20));
+        statusPanel.setBackground(new Color(235, 235, 235));
         statusPanel.setBorder(BorderFactory.createCompoundBorder(
             BorderFactory.createLineBorder(PANEL_BORDER_COLOR, 1),
             BorderFactory.createEmptyBorder(5, 10, 5, 10)
         ));
         hysteriaLabel = new JLabel("Hysteria: " + Helpers.hysteria, SwingConstants.LEFT);
         hysteriaLabel.setForeground(TEXT_COLOR);
-        hysteriaLabel.setFont(new Font("Serif", Font.BOLD, 14));
-        
         statusLabel = new JLabel(" Simulation Running", SwingConstants.CENTER);
         statusLabel.setForeground(TEXT_COLOR);
-        statusLabel.setFont(new Font("Serif", Font.BOLD, 16));
-        
         JPanel countersPanel = new JPanel(new FlowLayout());
-        countersPanel.setBackground(new Color(35, 25, 20));
-        
+        countersPanel.setBackground(new Color(235, 235, 235));
         aliveCountLabel = new JLabel("Alive: 0");
-        aliveCountLabel.setForeground(Color.GREEN);
-        aliveCountLabel.setFont(new Font("Serif", Font.BOLD, 14));
-        
+        aliveCountLabel.setForeground(new Color(0, 128, 0));
         deadCountLabel = new JLabel("Dead: 0");
-        deadCountLabel.setForeground(Color.RED);
-        deadCountLabel.setFont(new Font("Serif", Font.BOLD, 14));
-        
+        deadCountLabel.setForeground(new Color(200, 0, 0));
         countersPanel.add(aliveCountLabel);
         countersPanel.add(Box.createHorizontalStrut(20));
         countersPanel.add(deadCountLabel);
-        
         statusPanel.add(hysteriaLabel, BorderLayout.WEST);
         statusPanel.add(statusLabel, BorderLayout.CENTER);
         statusPanel.add(countersPanel, BorderLayout.EAST);
-        
         return statusPanel;
     }
     
@@ -179,29 +155,20 @@ public class GridUI extends JFrame {
         JPanel rightPanel = new JPanel(new BorderLayout());
         rightPanel.setPreferredSize(new Dimension(400, 0));
         rightPanel.setBackground(BACKGROUND_COLOR);
-        
-        // Create styled text pane for communications
         infoTextPane = new JTextPane();
         infoTextPane.setEditable(false);
-        infoTextPane.setBackground(new Color(50, 40, 35));
+        infoTextPane.setBackground(new Color(250, 250, 250));
         infoTextPane.setForeground(TEXT_COLOR);
-        infoTextPane.setFont(new Font("Serif", Font.PLAIN, 12));
-        
         JScrollPane scrollPane = new JScrollPane(infoTextPane);
         scrollPane.setBorder(createThemedBorder("Village Gossip & Accusations"));
-        scrollPane.setVerticalScrollBarPolicy(JScrollPane.VERTICAL_SCROLLBAR_AS_NEEDED);
-        scrollPane.setHorizontalScrollBarPolicy(JScrollPane.HORIZONTAL_SCROLLBAR_AS_NEEDED);
-        scrollPane.setBackground(BACKGROUND_COLOR); 
-        scrollPane.getViewport().setBackground(BACKGROUND_COLOR); 
-        
-        // Style the scrollbar
+        scrollPane.setBackground(BACKGROUND_COLOR);
+        scrollPane.getViewport().setBackground(BACKGROUND_COLOR);
         scrollPane.getVerticalScrollBar().setBackground(BACKGROUND_COLOR);
         scrollPane.getHorizontalScrollBar().setBackground(BACKGROUND_COLOR);
-        
         rightPanel.add(scrollPane, BorderLayout.CENTER);
-        
         return rightPanel;
     }
+
     
     private Border createThemedBorder(String title) {
         return BorderFactory.createTitledBorder(
@@ -317,7 +284,7 @@ public class GridUI extends JFrame {
         
         public GridPanel() {
             setPreferredSize(new Dimension(gridWidth * cellSize, gridHeight * cellSize));
-            setBackground(new Color(60, 50, 40));
+            setBackground(new Color(255, 255, 255));
         }
         
         @Override

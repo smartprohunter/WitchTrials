@@ -181,7 +181,6 @@
         <NamedIndividual IRI="#John_Hawthorne"/>
         <NamedIndividual IRI="#John_Porter"/>
         <NamedIndividual IRI="#John_Proctor"/>
-        <NamedIndividual IRI="#Joseph_Porter"/>
         <NamedIndividual IRI="#Martha_Carrier"/>
         <NamedIndividual IRI="#Rebecca_Nurse"/>
         <NamedIndividual IRI="#Samuell_Sewall"/>
@@ -189,93 +188,6 @@
         <NamedIndividual IRI="#Susannah_Martin"/>
         <NamedIndividual IRI="#Thomas_Danforth"/>
         <NamedIndividual IRI="#Thomas_Putnam"/>
-        <NamedIndividual IRI="#Tituba"/>
-    </DifferentIndividuals>
-    <DifferentIndividuals>
-        <NamedIndividual IRI="#Ann_Putnam"/>
-        <NamedIndividual IRI="#Bridget_Bishop"/>
-        <NamedIndividual IRI="#Elizabeth_Proctor"/>
-        <NamedIndividual IRI="#Giles_Corey"/>
-        <NamedIndividual IRI="#John_Hawthorne"/>
-        <NamedIndividual IRI="#John_Porter"/>
-        <NamedIndividual IRI="#John_Proctor"/>
-        <NamedIndividual IRI="#Martha_Carrier"/>
-        <NamedIndividual IRI="#Rebecca_Nurse"/>
-        <NamedIndividual IRI="#Samuell_Sewall"/>
-        <NamedIndividual IRI="#Sarah_Good"/>
-        <NamedIndividual IRI="#Susannah_Martin"/>
-        <NamedIndividual IRI="#Thomas_Danforth"/>
-        <NamedIndividual IRI="#Thomas_Putnam"/>
-        <NamedIndividual IRI="#Tituba"/>
-    </DifferentIndividuals>
-    <DifferentIndividuals>
-        <NamedIndividual IRI="#Bridget_Bishop"/>
-        <NamedIndividual IRI="#Elizabeth_Proctor"/>
-        <NamedIndividual IRI="#Giles_Corey"/>
-        <NamedIndividual IRI="#John_Hawthorne"/>
-        <NamedIndividual IRI="#John_Porter"/>
-        <NamedIndividual IRI="#John_Proctor"/>
-        <NamedIndividual IRI="#Martha_Carrier"/>
-        <NamedIndividual IRI="#Rebecca_Nurse"/>
-        <NamedIndividual IRI="#Samuell_Sewall"/>
-        <NamedIndividual IRI="#Sarah_Good"/>
-        <NamedIndividual IRI="#Susannah_Martin"/>
-        <NamedIndividual IRI="#Thomas_Danforth"/>
-        <NamedIndividual IRI="#Thomas_Putnam"/>
-        <NamedIndividual IRI="#Tituba"/>
-    </DifferentIndividuals>
-    <DifferentIndividuals>
-        <NamedIndividual IRI="#Bridget_Bishop"/>
-        <NamedIndividual IRI="#Elizabeth_Proctor"/>
-        <NamedIndividual IRI="#Giles_Corey"/>
-        <NamedIndividual IRI="#John_Hawthorne"/>
-        <NamedIndividual IRI="#John_Proctor"/>
-        <NamedIndividual IRI="#Martha_Carrier"/>
-        <NamedIndividual IRI="#Rebecca_Nurse"/>
-        <NamedIndividual IRI="#Samuell_Sewall"/>
-        <NamedIndividual IRI="#Sarah_Good"/>
-        <NamedIndividual IRI="#Susannah_Martin"/>
-        <NamedIndividual IRI="#Thomas_Danforth"/>
-        <NamedIndividual IRI="#Thomas_Putnam"/>
-        <NamedIndividual IRI="#Tituba"/>
-    </DifferentIndividuals>
-    <DifferentIndividuals>
-        <NamedIndividual IRI="#Bridget_Bishop"/>
-        <NamedIndividual IRI="#Elizabeth_Proctor"/>
-        <NamedIndividual IRI="#Giles_Corey"/>
-        <NamedIndividual IRI="#John_Hawthorne"/>
-        <NamedIndividual IRI="#John_Proctor"/>
-        <NamedIndividual IRI="#Martha_Carrier"/>
-        <NamedIndividual IRI="#Rebecca_Nurse"/>
-        <NamedIndividual IRI="#Samuell_Sewall"/>
-        <NamedIndividual IRI="#Sarah_Good"/>
-        <NamedIndividual IRI="#Susannah_Martin"/>
-        <NamedIndividual IRI="#Thomas_Danforth"/>
-        <NamedIndividual IRI="#Tituba"/>
-    </DifferentIndividuals>
-    <DifferentIndividuals>
-        <NamedIndividual IRI="#Bridget_Bishop"/>
-        <NamedIndividual IRI="#Elizabeth_Proctor"/>
-        <NamedIndividual IRI="#Giles_Corey"/>
-        <NamedIndividual IRI="#John_Hawthorne"/>
-        <NamedIndividual IRI="#John_Proctor"/>
-        <NamedIndividual IRI="#Martha_Carrier"/>
-        <NamedIndividual IRI="#Rebecca_Nurse"/>
-        <NamedIndividual IRI="#Samuell_Sewall"/>
-        <NamedIndividual IRI="#Sarah_Good"/>
-        <NamedIndividual IRI="#Thomas_Danforth"/>
-        <NamedIndividual IRI="#Tituba"/>
-    </DifferentIndividuals>
-    <DifferentIndividuals>
-        <NamedIndividual IRI="#Bridget_Bishop"/>
-        <NamedIndividual IRI="#Elizabeth_Proctor"/>
-        <NamedIndividual IRI="#John_Hawthorne"/>
-        <NamedIndividual IRI="#John_Proctor"/>
-        <NamedIndividual IRI="#Martha_Carrier"/>
-        <NamedIndividual IRI="#Rebecca_Nurse"/>
-        <NamedIndividual IRI="#Samuell_Sewall"/>
-        <NamedIndividual IRI="#Sarah_Good"/>
-        <NamedIndividual IRI="#Thomas_Danforth"/>
         <NamedIndividual IRI="#Tituba"/>
     </DifferentIndividuals>
     <ObjectPropertyAssertion>
@@ -506,7 +418,7 @@
     <DataPropertyAssertion>
         <DataProperty IRI="#Age"/>
         <NamedIndividual IRI="#John_Hawthorne"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">22</Literal>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">51</Literal>
     </DataPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#Gender"/>
@@ -746,12 +658,6 @@
         <ObjectProperty IRI="#Relationships"/>
     </SubObjectPropertyOf>
     <SymmetricObjectProperty>
-        <ObjectProperty IRI="#dislikes"/>
-    </SymmetricObjectProperty>
-    <SymmetricObjectProperty>
-        <ObjectProperty IRI="#likes"/>
-    </SymmetricObjectProperty>
-    <SymmetricObjectProperty>
         <ObjectProperty IRI="#relative_of"/>
     </SymmetricObjectProperty>
     <DataPropertyDomain>
@@ -760,11 +666,7 @@
     </DataPropertyDomain>
     <DataPropertyDomain>
         <DataProperty IRI="#Gender"/>
-        <Class IRI="#Judge"/>
-    </DataPropertyDomain>
-    <DataPropertyDomain>
-        <DataProperty IRI="#Gender"/>
-        <Class IRI="#Townie"/>
+        <Class IRI="#Person"/>
     </DataPropertyDomain>
     <DataPropertyDomain>
         <DataProperty IRI="#Profession"/>
